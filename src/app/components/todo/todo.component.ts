@@ -17,5 +17,6 @@ export class TodoComponent implements OnInit {
   }
   deleteTodo(todo: Todo) {
     this.todos = this.todos.filter((element) => element.id !== todo.id);
+    //Call this.todoService.deleteTodo(todo).suscribe(); from the service
   }
 }
