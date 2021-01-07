@@ -7,8 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'AngularCC1';
-  constructor() {
-    console.log(this.title);
-    console.log('test');
-  }
+  constructor() {}
 }

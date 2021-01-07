@@ -15,4 +15,7 @@ export class TodoComponent implements OnInit {
       this.todos = todos;
     });
   }
+  deleteTodo(todo: Todo) {
+    this.todos = this.todos.filter((element) => element.id !== todo.id);
+  }
 }

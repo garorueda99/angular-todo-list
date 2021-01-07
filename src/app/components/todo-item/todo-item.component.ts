@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Todo } from 'src/app/models/Todos';
 
 @Component({
@@ -8,6 +8,7 @@ import { Todo } from 'src/app/models/Todos';
 })
 export class TodoItemComponent implements OnInit {
   @Input() todo!: Todo;
+  @Output() deleteTodo: EventEmitter<Todo> = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
@@ -27,6 +28,6 @@ export class TodoItemComponent implements OnInit {
   }
 
   onDelete(todo: Todo) {
-    console.log('Delete');
+    this.deleteTodo.emit(todo);
   }
 }
