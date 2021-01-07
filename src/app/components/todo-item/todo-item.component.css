@@ -7,6 +7,11 @@
   cursor: pointer;
   float: right;
 }
+.test {
+  margin-top: 10px;
+  width: 100wv;
+  border: 2px solid red;
+}
 
 .todo {
   background: #f4f4f4;
